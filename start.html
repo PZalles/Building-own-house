@@ -24,6 +24,67 @@
             line-height: 50px;
             cursor: pointer;
         }
+
+        div:nth-of-type(1) {
+            position: absolute;
+            top: 80vh;
+            left: 20vw;
+            width: 0;
+            height: 0;
+            background-color: darkred;
+            transition: 1s;
+            z-index: 1;
+        }
+
+        span:hover~div:nth-of-type(1) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 250px;
+            background-color: darkred;
+        }
+
+        div:nth-of-type(2) {
+            position: absolute;
+            top: 80vh;
+            left: 20vw;
+            width: 0;
+            height: 0;
+            background-color: black;
+            transition: 1s .2s;
+        }
+
+        span:hover~div:nth-of-type(2) {
+            position: absolute;
+            top: calc(50% - 125px);
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 283px;
+            height: 283px;
+            background-color: black;
+        }
+
+        div:nth-of-type(3) {
+            position: absolute;
+            top: 80vh;
+            left: 20vw;
+            width: 0;
+            height: 0;
+            background-color: #333;
+            transition: 1s .4s;
+            z-index: -1;
+        }
+
+        span:hover~div:nth-of-type(3) {
+            position: absolute;
+            top: 20%;
+            left: 53%;
+            width: 50px;
+            height: 100px;
+            background-color: #333;
+        }
     </style>
 
 </head>
